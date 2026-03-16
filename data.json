@@ -1,127 +1,283 @@
 {
   "settings": {
-    "phone": "0912 345 678",
-    "address": "123 Đường Xuân Thủy, Cầu Giấy, Hà Nội",
+    "phone": "0982199200",
+    "address": "123 Đường Xuân Thủy, Cầu Giấy, Hà Nộ",
     "email": "info@sunshineenglish.vn",
     "hours": "Thứ 2–7: 8:00–21:00 | CN: 8:00–17:00",
     "zalo_link": "https://zalo.me/YOUR_OA_ID",
     "facebook": "#",
     "youtube": "#"
   },
-
   "banners": [
     {
-      "id": "slide1",
-      "active": true,
-      "badge_icon": "🏆",
-      "badge_text": "Trung tâm tiếng Anh uy tín #1",
-      "title_line1": "Nơi Trẻ Em",
-      "title_highlight": "Tiếng Anh",
-      "title_line2": "Với Niềm Vui",
-      "description": "Chương trình học toàn diện từ 4 tuổi đến lớp 12, kết hợp phương pháp hiện đại và giáo viên giàu kinh nghiệm.",
-      "btn1_text": "🎯 Xem khóa học",
-      "btn1_link": "#courses",
-      "btn2_text": "📞 Tư vấn miễn phí",
       "btn2_link": "#contact",
-      "stats": [
-        { "num": "2,500+", "label": "Học viên" },
-        { "num": "98%", "label": "Hài lòng" },
-        { "num": "12+", "label": "Năm KN" },
-        { "num": "6.5+", "label": "IELTS TB" }
-      ],
-      "card_emoji": "👧🏫",
+      "btn1_link": "#courses",
+      "active": true,
+      "badge_text": "Trung tâm tiếng Anh uy tín #1",
       "card_title": "Học vui, Tiến nhanh",
+      "theme": "blue",
+      "title_highlight": "Tiếng Anh",
       "card_sub": "Học qua trò chơi & trải nghiệm",
-      "theme": "blue"
+      "badge_icon": "🏆",
+      "title_line1": "Nơi Trẻ Em",
+      "btn2_text": "📞 Tư vấn miễn phí",
+      "btn1_text": "🎯 Xem khóa học",
+      "title_line2": "Với Niềm Vui",
+      "card_emoji": "👧🏫",
+      "id": "slide1",
+      "description": "Chương trình học toàn diện từ 4 tuổi đến lớp 12, kết hợp phương pháp hiện đại và giáo viên giàu kinh nghiệm.",
+      "stats": [
+        {
+          "num": "2,500+",
+          "label": "Học viên"
+        },
+        {
+          "num": "98%",
+          "label": "Hài lòng"
+        },
+        {
+          "num": "12+",
+          "label": "Năm KN"
+        },
+        {
+          "num": "6.5+",
+          "label": "IELTS TB"
+        }
+      ]
     },
     {
-      "id": "slide2",
-      "active": true,
-      "badge_icon": "🎓",
-      "badge_text": "Cam kết đầu ra IELTS",
-      "title_line1": "Luyện Thi",
-      "title_highlight": "IELTS",
-      "title_line2": "Đạt Band Cao",
-      "description": "Học viên đạt IELTS 6.5–7.5 sau 6 tháng. Cam kết đầu ra hoặc học lại miễn phí.",
-      "btn1_text": "🌍 Đăng ký IELTS",
-      "btn1_link": "#courses",
-      "btn2_text": "📅 Lịch khai giảng",
       "btn2_link": "#schedule",
-      "stats": [
-        { "num": "7.5", "label": "IELTS cao nhất" },
-        { "num": "95%", "label": "Đạt mục tiêu" },
-        { "num": "50+", "label": "Học bổng" },
-        { "num": "6T", "label": "Cam kết" }
-      ],
-      "card_emoji": "🌍📝",
+      "btn1_link": "#courses",
+      "active": true,
+      "badge_text": "Cam kết đầu ra IELTS",
       "card_title": "IELTS 7.5 trong 6 tháng",
+      "theme": "pink",
+      "title_highlight": "IELTS",
       "card_sub": "Mock test thực chiến mỗi tuần",
-      "theme": "pink"
+      "badge_icon": "🎓",
+      "title_line1": "Luyện Thi",
+      "btn2_text": "📅 Lịch khai giảng",
+      "btn1_text": "🌍 Đăng ký IELTS",
+      "title_line2": "Đạt Band Cao",
+      "card_emoji": "🌍📝",
+      "id": "slide2",
+      "description": "Học viên đạt IELTS 6.5–7.5 sau 6 tháng. Cam kết đầu ra hoặc học lại miễn phí.",
+      "stats": [
+        {
+          "num": "7.5",
+          "label": "IELTS cao nhất"
+        },
+        {
+          "num": "95%",
+          "label": "Đạt mục tiêu"
+        },
+        {
+          "num": "50+",
+          "label": "Học bổng"
+        },
+        {
+          "num": "6T",
+          "label": "Cam kết"
+        }
+      ]
     }
   ],
-
   "courses": [
     {
-      "age": "4–6 tuổi", "emoji": "🧸", "color": "blue",
+      "age": "4–6 tuổi",
+      "emoji": "🧸",
+      "color": "blue",
       "title": "Mầm Non Tiếng Anh",
       "description": "Làm quen tiếng Anh qua bài hát, trò chơi màu sắc và câu chuyện vui. Xây nền tảng phát âm chuẩn từ sớm.",
-      "features": ["Học qua hát, vẽ & kể chuyện", "Lớp nhỏ: tối đa 10 học viên", "GV chuyên biệt mầm non"],
-      "price": "1.200.000đ", "featured": false
+      "features": [
+        "Học qua hát, vẽ & kể chuyện",
+        "Lớp nhỏ: tối đa 10 học viên",
+        "GV chuyên biệt mầm non"
+      ],
+      "price": "1.200.000đ",
+      "featured": false
     },
     {
-      "age": "Lớp 1–3", "emoji": "🌈", "color": "green",
+      "age": "Lớp 1–3",
+      "emoji": "🌈",
+      "color": "green",
       "title": "Tiểu Học Cơ Bản",
       "description": "Xây dựng từ vựng, ngữ pháp nền tảng. Chuẩn bị tốt cho các kỳ thi Cambridge.",
-      "features": ["Nghe – Nói – Đọc – Viết", "Ôn thi Starters, Movers, Flyers", "Giáo trình Cambridge quốc tế"],
-      "price": "1.400.000đ", "featured": false
+      "features": [
+        "Nghe – Nói – Đọc – Viết",
+        "Ôn thi Starters, Movers, Flyers",
+        "Giáo trình Cambridge quốc tế"
+      ],
+      "price": "1.400.000đ",
+      "featured": false
     },
     {
-      "age": "Lớp 4–5", "emoji": "🚀", "color": "yellow",
+      "age": "Lớp 4–5",
+      "emoji": "🚀",
+      "color": "yellow",
       "title": "Tiểu Học Nâng Cao",
       "description": "Nâng cao kỹ năng toàn diện, hướng đến chứng chỉ quốc tế KET/PET.",
-      "features": ["Luyện thi KET / PET Cambridge", "Hội thoại với GV nước ngoài", "Dự án nhóm & thuyết trình"],
-      "price": "1.600.000đ", "featured": true
+      "features": [
+        "Luyện thi KET / PET Cambridge",
+        "Hội thoại với GV nước ngoài",
+        "Dự án nhóm & thuyết trình"
+      ],
+      "price": "1.600.000đ",
+      "featured": true
     },
     {
-      "age": "Lớp 6–9", "emoji": "📚", "color": "purple",
+      "age": "Lớp 6–9",
+      "emoji": "📚",
+      "color": "purple",
       "title": "THCS – B1/B2",
       "description": "Bứt phá cấp 2, hướng tới B1/B2. Luyện đề thi vào trường chuyên.",
-      "features": ["Luyện thi B1/B2 Châu Âu", "Ôn thi tuyển sinh trường chuyên", "Kỹ năng viết luận học thuật"],
-      "price": "1.800.000đ", "featured": false
+      "features": [
+        "Luyện thi B1/B2 Châu Âu",
+        "Ôn thi tuyển sinh trường chuyên",
+        "Kỹ năng viết luận học thuật"
+      ],
+      "price": "1.800.000đ",
+      "featured": false
     },
     {
-      "age": "Lớp 10–12", "emoji": "🎓", "color": "coral",
+      "age": "Lớp 10–12",
+      "emoji": "🎓",
+      "color": "coral",
       "title": "THPT – Luyện Thi",
       "description": "Ôn thi THPT Quốc gia tiếng Anh, chuẩn bị du học.",
-      "features": ["Luyện đề thi THPT Quốc gia", "Hồ sơ du học & học bổng", "SAT / ACT English"],
-      "price": "2.000.000đ", "featured": false
+      "features": [
+        "Luyện đề thi THPT Quốc gia",
+        "Hồ sơ du học & học bổng",
+        "SAT / ACT English"
+      ],
+      "price": "2.000.000đ",
+      "featured": false
     },
     {
-      "age": "Từ 13 tuổi", "emoji": "🌍", "color": "teal",
+      "age": "Từ 13 tuổi",
+      "emoji": "🌍",
+      "color": "teal",
       "title": "Luyện Thi IELTS",
       "description": "Từ 5.0 lên 6.5–7.5+. Cam kết đầu ra hoặc học lại miễn phí.",
-      "features": ["IELTS từ 5.0 lên 6.5–7.5+", "Mock test hàng tuần như thi thật", "Cam kết đầu ra"],
-      "price": "2.500.000đ", "featured": false
+      "features": [
+        "IELTS từ 5.0 lên 6.5–7.5+",
+        "Mock test hàng tuần như thi thật",
+        "Cam kết đầu ra"
+      ],
+      "price": "2.500.000đ",
+      "featured": false
     }
   ],
-
   "schedule": [
-    { "date": "15/03/2026", "course": "Mầm non Tiếng Anh", "schedule": "T2–T4–T6, 15:30–17:00", "teacher": "Cô Hương", "seats": "8/10", "status": "open", "category": "mamnon" },
-    { "date": "17/03/2026", "course": "Tiểu học Cơ bản (Starters)", "schedule": "T3–T5–T7, 16:00–17:30", "teacher": "Thầy John", "seats": "6/12", "status": "open", "category": "tieuhoc" },
-    { "date": "20/03/2026", "course": "IELTS Target 6.5+", "schedule": "T2–T4–T6, 18:00–20:00", "teacher": "Cô Linh", "seats": "10/15", "status": "open", "category": "ielts" },
-    { "date": "22/03/2026", "course": "THCS – B1 Foundations", "schedule": "T3–T5, 17:00–19:00", "teacher": "Thầy Minh", "seats": "12/12", "status": "full", "category": "thcs" },
-    { "date": "25/03/2026", "course": "Tiểu học Nâng cao (KET)", "schedule": "T2–T4, 17:30–19:00", "teacher": "Cô Sarah", "seats": "4/12", "status": "open", "category": "tieuhoc" },
-    { "date": "01/04/2026", "course": "IELTS Target 7.0+", "schedule": "T3–T5–T7, 18:00–20:00", "teacher": "Thầy David", "seats": "3/10", "status": "soon", "category": "ielts" },
-    { "date": "05/04/2026", "course": "THPT – Luyện thi THPTQG", "schedule": "T7–CN, 8:00–11:00", "teacher": "Thầy Hùng", "seats": "8/20", "status": "soon", "category": "thpt" },
-    { "date": "10/04/2026", "course": "IELTS Intensive (3 tháng)", "schedule": "T2 đến T7, 17:30–19:30", "teacher": "Thầy Khoa", "seats": "6/10", "status": "soon", "category": "ielts" }
+    {
+      "date": "15/03/2026",
+      "course": "Mầm non Tiếng Anh",
+      "schedule": "T2–T4–T6, 15:30–17:00",
+      "teacher": "Cô Hương",
+      "seats": "8/10",
+      "status": "open",
+      "category": "mamnon"
+    },
+    {
+      "date": "17/03/2026",
+      "course": "Tiểu học Cơ bản (Starters)",
+      "schedule": "T3–T5–T7, 16:00–17:30",
+      "teacher": "Thầy John",
+      "seats": "6/12",
+      "status": "open",
+      "category": "tieuhoc"
+    },
+    {
+      "date": "20/03/2026",
+      "course": "IELTS Target 6.5+",
+      "schedule": "T2–T4–T6, 18:00–20:00",
+      "teacher": "Cô Linh",
+      "seats": "10/15",
+      "status": "open",
+      "category": "ielts"
+    },
+    {
+      "date": "22/03/2026",
+      "course": "THCS – B1 Foundations",
+      "schedule": "T3–T5, 17:00–19:00",
+      "teacher": "Thầy Minh",
+      "seats": "12/12",
+      "status": "full",
+      "category": "thcs"
+    },
+    {
+      "date": "25/03/2026",
+      "course": "Tiểu học Nâng cao (KET)",
+      "schedule": "T2–T4, 17:30–19:00",
+      "teacher": "Cô Sarah",
+      "seats": "4/12",
+      "status": "open",
+      "category": "tieuhoc"
+    },
+    {
+      "date": "01/04/2026",
+      "course": "IELTS Target 7.0+",
+      "schedule": "T3–T5–T7, 18:00–20:00",
+      "teacher": "Thầy David",
+      "seats": "3/10",
+      "status": "soon",
+      "category": "ielts"
+    },
+    {
+      "date": "05/04/2026",
+      "course": "THPT – Luyện thi THPTQG",
+      "schedule": "T7–CN, 8:00–11:00",
+      "teacher": "Thầy Hùng",
+      "seats": "8/20",
+      "status": "soon",
+      "category": "thpt"
+    },
+    {
+      "date": "10/04/2026",
+      "course": "IELTS Intensive (3 tháng)",
+      "schedule": "T2 đến T7, 17:30–19:30",
+      "teacher": "Thầy Khoa",
+      "seats": "6/10",
+      "status": "soon",
+      "category": "ielts"
+    }
   ],
-
   "testimonials": [
-    { "tag": "Mầm non", "content": "Con gái 5 tuổi rất thích đến lớp mỗi ngày. Sau 3 tháng bé đã hát nhiều bài tiếng Anh và nhận biết màu sắc, con vật. Các cô giáo rất tận tình và yêu trẻ!", "name": "Chị Nguyễn Thị Lan", "role": "Phụ huynh bé Bông, 5 tuổi · Quận Đống Đa" },
-    { "tag": "IELTS", "content": "Mình học IELTS từ band 5.0, sau 6 tháng đạt 7.0. Thầy chấm Writing rất kỹ, chỉ ra lỗi sai cụ thể. Mock test hàng tuần giúp mình tự tin hơn rất nhiều!", "name": "Em Trần Đức Minh", "role": "Học viên IELTS · 17 tuổi · THPT Chu Văn An" },
-    { "tag": "Tiểu học", "content": "Hai anh em nhà tôi đều học tại đây từ lớp 2. Con lớn đã đậu Movers 5 shields. Chương trình bài bản, GV nhiệt tình, phản hồi thường xuyên với phụ huynh.", "name": "Anh Lê Hoàng Nam", "role": "Phụ huynh 2 bé · Quận Cầu Giấy" },
-    { "tag": "THCS", "content": "Con thi đỗ vào lớp 6 trường Amsterdam điểm tiếng Anh 9.5. Cảm ơn Sunshine đã đồng hành cùng con trong 3 năm!", "name": "Chị Phạm Hồng Vân", "role": "Phụ huynh bé Gia Hân · Quận Tây Hồ" },
-    { "tag": "IELTS", "content": "Nhờ Sunshine mình đạt 7.5 và nhận học bổng du học Úc. Thầy cô không chỉ dạy tốt mà còn định hướng tương lai rất tốt cho học sinh.", "name": "Em Vũ Phương Linh", "role": "Học bổng ĐH Melbourne · IELTS 7.5" },
-    { "tag": "Tiểu học", "content": "Lớp học rất sôi nổi. Con thích nhất Speaking với GV nước ngoài — phát âm tiến bộ rõ rệt chỉ sau 2 tháng!", "name": "Chị Đào Thị Hà", "role": "Phụ huynh bé Nam Anh, lớp 4 · Quận Ba Đình" }
+    {
+      "tag": "Mầm non",
+      "content": "Con gái 5 tuổi rất thích đến lớp mỗi ngày. Sau 3 tháng bé đã hát nhiều bài tiếng Anh và nhận biết màu sắc, con vật. Các cô giáo rất tận tình và yêu trẻ!",
+      "name": "Chị Nguyễn Thị Lan",
+      "role": "Phụ huynh bé Bông, 5 tuổi · Quận Đống Đa"
+    },
+    {
+      "tag": "IELTS",
+      "content": "Mình học IELTS từ band 5.0, sau 6 tháng đạt 7.0. Thầy chấm Writing rất kỹ, chỉ ra lỗi sai cụ thể. Mock test hàng tuần giúp mình tự tin hơn rất nhiều!",
+      "name": "Em Trần Đức Minh",
+      "role": "Học viên IELTS · 17 tuổi · THPT Chu Văn An"
+    },
+    {
+      "tag": "Tiểu học",
+      "content": "Hai anh em nhà tôi đều học tại đây từ lớp 2. Con lớn đã đậu Movers 5 shields. Chương trình bài bản, GV nhiệt tình, phản hồi thường xuyên với phụ huynh.",
+      "name": "Anh Lê Hoàng Nam",
+      "role": "Phụ huynh 2 bé · Quận Cầu Giấy"
+    },
+    {
+      "tag": "THCS",
+      "content": "Con thi đỗ vào lớp 6 trường Amsterdam điểm tiếng Anh 9.5. Cảm ơn Sunshine đã đồng hành cùng con trong 3 năm!",
+      "name": "Chị Phạm Hồng Vân",
+      "role": "Phụ huynh bé Gia Hân · Quận Tây Hồ"
+    },
+    {
+      "tag": "IELTS",
+      "content": "Nhờ Sunshine mình đạt 7.5 và nhận học bổng du học Úc. Thầy cô không chỉ dạy tốt mà còn định hướng tương lai rất tốt cho học sinh.",
+      "name": "Em Vũ Phương Linh",
+      "role": "Học bổng ĐH Melbourne · IELTS 7.5"
+    },
+    {
+      "tag": "Tiểu học",
+      "content": "Lớp học rất sôi nổi. Con thích nhất Speaking với GV nước ngoài — phát âm tiến bộ rõ rệt chỉ sau 2 tháng!",
+      "name": "Chị Đào Thị Hà",
+      "role": "Phụ huynh bé Nam Anh, lớp 4 · Quận Ba Đình"
+    }
   ]
 }
