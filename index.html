@@ -359,21 +359,30 @@ footer{background:var(--dark);color:#fff;padding:56px 5% 28px;}
     </div>
     <div class="c-form reveal">
       <h4>📝 Đăng ký tư vấn ngay</h4>
-      <div class="form-row">
-        <div class="fg"><label>Họ và tên phụ huynh *</label><input type="text" placeholder="Nguyễn Thị A"></div>
-        <div class="fg"><label>Số điện thoại *</label><input type="tel" placeholder="0912 345 678"></div>
-      </div>
-      <div class="form-row">
-        <div class="fg"><label>Tên học viên</label><input type="text" placeholder="Tên con"></div>
-        <div class="fg"><label>Độ tuổi / Lớp</label>
-          <select><option value="">-- Chọn --</option><option>4–6 tuổi (Mầm non)</option><option>Lớp 1–3</option><option>Lớp 4–5</option><option>Lớp 6–9</option><option>Lớp 10–12</option><option>Luyện thi IELTS</option></select>
+      <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <div class="fg"><label>Họ và tên phụ huynh *</label><input type="text" name="ho_ten" placeholder="Nguyễn Thị A" required></div>
+          <div class="fg"><label>Số điện thoại *</label><input type="tel" name="so_dien_thoai" placeholder="0912 345 678" required></div>
         </div>
+        <div class="form-row">
+          <div class="fg"><label>Tên học viên</label><input type="text" name="ten_hoc_vien" placeholder="Tên con"></div>
+          <div class="fg"><label>Độ tuổi / Lớp</label>
+            <select name="do_tuoi"><option value="">-- Chọn --</option><option>4–6 tuổi (Mầm non)</option><option>Lớp 1–3</option><option>Lớp 4–5</option><option>Lớp 6–9</option><option>Lớp 10–12</option><option>Luyện thi IELTS</option></select>
+          </div>
+        </div>
+        <div class="fg"><label>Khóa học quan tâm</label>
+          <select name="khoa_hoc"><option>-- Chọn --</option><option>Mầm non</option><option>Tiểu học Cơ bản</option><option>Tiểu học Nâng cao</option><option>THCS – B1/B2</option><option>THPT</option><option>IELTS</option></select>
+        </div>
+        <div class="fg"><label>Ghi chú</label><textarea name="ghi_chu" placeholder="Thời gian rảnh, mong muốn..."></textarea></div>
+        <input type="hidden" name="_subject" value="🎓 Đăng ký tư vấn mới — Sunshine English">
+        <input type="hidden" name="_language" value="vi">
+        <button type="submit" class="btn-submit" id="submitBtn">🚀 Gửi đăng ký tư vấn miễn phí</button>
+      </form>
+      <div id="formSuccess" style="display:none;text-align:center;padding:24px;">
+        <div style="font-size:3rem;margin-bottom:12px;">✅</div>
+        <h4 style="font-family:'Baloo 2',cursive;font-size:1.3rem;margin-bottom:8px;">Gửi thành công!</h4>
+        <p style="color:#667;font-size:.95rem;">Chúng tôi sẽ liên hệ với bạn trong vòng 30 phút.</p>
       </div>
-      <div class="fg"><label>Khóa học quan tâm</label>
-        <select><option>-- Chọn --</option><option>Mầm non</option><option>Tiểu học Cơ bản</option><option>Tiểu học Nâng cao</option><option>THCS – B1/B2</option><option>THPT</option><option>IELTS</option></select>
-      </div>
-      <div class="fg"><label>Ghi chú</label><textarea placeholder="Thời gian rảnh, mong muốn..."></textarea></div>
-      <button class="btn-submit" onclick="submitForm()">🚀 Gửi đăng ký tư vấn miễn phí</button>
     </div>
   </div>
 </section>
