@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/sunshine-english   # ← thay bằng username/repo của bạn
+  repo: coccocdinho/sunshine-english   # ← thay bằng username/repo của bạn
   branch: main
 
 # Cho phép đăng nhập qua GitHub OAuth (Netlify tự xử lý)
@@ -10,8 +10,8 @@ publish_mode: editorial_workflow
 media_library:
   name: cloudinary
   config:
-    cloud_name: YOUR_CLOUDINARY_CLOUD_NAME      # ← lấy trong Cloudinary dashboard
-    api_key: YOUR_CLOUDINARY_API_KEY            # ← lấy trong Cloudinary dashboard
+    cloud_name: davitluit      # ← lấy trong Cloudinary dashboard
+    api_key: 812335996819322            # ← lấy trong Cloudinary dashboard
 
 media_folder: "uploads"
 public_folder: "uploads"
