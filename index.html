@@ -10,10 +10,10 @@
 *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
 body{font-family:"Nunito",sans-serif;background:#fff;color:var(--dark);overflow-x:hidden;}
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(0,0,0,.08);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:72px;transition:.3s;}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(0,0,0,.08);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:96px;transition:.3s;}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
 .logo img{height:48px;width:48px;object-fit:contain;}
-.logo-text{font-family:"Baloo 2",cursive;font-weight:800;font-size:1.35rem;color:var(--dark);line-height:1;}
+.logo-text{font-family:"Baloo 2",cursive;font-weight:800;font-size:1.05rem;color:var(--dark);line-height:1;}.f-brand .logo-text{color:#ffffff!important;}.f-brand .logo-text span{color:#5bcfff!important;}
 .logo-text span{color:var(--sky);}
 .nav-links{display:flex;gap:6px;list-style:none;}
 .nav-links a{text-decoration:none;font-weight:700;font-size:.9rem;color:var(--dark);padding:8px 14px;border-radius:50px;transition:.25s;}
@@ -26,7 +26,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .mobile-nav a{text-decoration:none;font-weight:700;color:var(--dark);padding:12px 16px;border-radius:12px;transition:.2s;}
 .mobile-nav a:hover{background:var(--light);}
 /* HERO SLIDER */
-#home{position:relative;padding-top:72px;overflow:hidden;}
+#home{position:relative;padding-top:96px;overflow:hidden;}
 .slider{position:relative;width:100%;overflow:hidden;}
 .slides-track{display:flex;transition:transform .7s cubic-bezier(.77,0,.18,1);}
 .slide{min-width:100%;min-height:calc(100vh - 72px);display:flex;align-items:center;padding:60px 5%;position:relative;overflow:hidden;}
@@ -205,7 +205,7 @@ footer{background:var(--dark);color:#fff;padding:56px 5% 28px;}
 .spinner-wrap{text-align:center;padding:60px 20px;color:#aaa;}
 .spinner{width:36px;height:36px;border:4px solid #eee;border-top-color:var(--sky);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 14px;}
 @keyframes spin{to{transform:rotate(360deg);}}
-@media(max-width:900px){.nav-links{display:none;}.hamburger{display:flex;}.slide-inner{flex-direction:column;text-align:center;}.hero-visual{display:none;}.hero-stats{justify-content:center;}.c-inner{grid-template-columns:1fr;}.f-grid{grid-template-columns:1fr 1fr;}.form-row{grid-template-columns:1fr;}}
+@media(max-width:900px){#about .reveal[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;gap:32px!important;}#about div[style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr!important;}.nav-links{display:none;}.hamburger{display:flex;}.slide-inner{flex-direction:column;text-align:center;}.hero-visual{display:none;}.hero-stats{justify-content:center;}.c-inner{grid-template-columns:1fr;}.f-grid{grid-template-columns:1fr 1fr;}.form-row{grid-template-columns:1fr;}}
 @media(max-width:600px){.f-grid{grid-template-columns:1fr;}.f-bottom{flex-direction:column;gap:8px;text-align:center;}}
 </style>
 </head>
@@ -213,13 +213,14 @@ footer{background:var(--dark);color:#fff;padding:56px 5% 28px;}
 
 <nav id="navbar">
   <a href="#home" class="logo">
-    <img id="logo-nav" src="" alt="Sunshine English">
-    <div class="logo-text">Sunshine <span>English</span></div>
+    <img id="logo-nav" src="" alt="Sunshine English" style="height:96px;width:96px;object-fit:contain;">
+    <div class="logo-text">Trung tâm Ngoại ngữ <span>Sunshine</span></div>
   </a>
   <ul class="nav-links">
     <li><a href="#home">Trang chủ</a></li>
     <li><a href="#courses">Khóa học</a></li>
     <li><a href="#schedule">Lịch khai giảng</a></li>
+    <li><a href="#about">Về chúng tôi</a></li>
     <li><a href="#testimonials">Phụ huynh nói gì</a></li>
     <li><a href="#contact">Liên hệ</a></li>
     <li><a href="#contact" class="nav-cta" onclick="event.preventDefault();goTo('contact')">Đăng ký ngay</a></li>
@@ -230,6 +231,7 @@ footer{background:var(--dark);color:#fff;padding:56px 5% 28px;}
   <a href="#home" onclick="closeMenu()">🏠 Trang chủ</a>
   <a href="#courses" onclick="closeMenu()">📚 Khóa học</a>
   <a href="#schedule" onclick="closeMenu()">📅 Lịch khai giảng</a>
+  <a href="#about" onclick="closeMenu()">🏫 Về chúng tôi</a>
   <a href="#testimonials" onclick="closeMenu()">💬 Phụ huynh nói gì</a>
   <a href="#contact" onclick="closeMenu()">📞 Liên hệ</a>
 </div>
@@ -282,6 +284,62 @@ footer{background:var(--dark);color:#fff;padding:56px 5% 28px;}
   </div>
 </section>
 
+
+<!-- VỀ CHÚNG TÔI -->
+<section id="about" style="background:linear-gradient(160deg,#f0f9ff 0%,#fff8e1 100%);">
+  <div class="section-header reveal">
+    <div class="section-tag">Về Chúng Tôi</div>
+    <h2 class="section-title">Sunshine — Hơn 12 Năm Đồng Hành Cùng Trẻ</h2>
+    <p class="section-desc">Chúng tôi tin rằng mỗi đứa trẻ đều có khả năng chinh phục tiếng Anh khi được học đúng phương pháp và môi trường phù hợp.</p>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+    <!-- Bên trái: câu chuyện -->
+    <div class="reveal">
+      <h3 style="font-family:'Baloo 2',cursive;font-size:1.5rem;font-weight:800;margin-bottom:20px;color:var(--dark);">Câu chuyện của chúng tôi</h3>
+      <p style="color:#556;line-height:1.85;margin-bottom:16px;font-size:.97rem;">Sunshine được thành lập với sứ mệnh mang tiếng Anh đến gần hơn với trẻ em Việt Nam — không chỉ là môn học, mà là công cụ mở ra cơ hội cho tương lai.</p>
+      <p style="color:#556;line-height:1.85;margin-bottom:16px;font-size:.97rem;">Với hơn 12 năm kinh nghiệm, chúng tôi đã đồng hành cùng hơn 2.500 học viên từ 4 tuổi đến lớp 12, từ những bước chập chững làm quen bảng chữ cái đến những bạn trẻ giành học bổng du học nước ngoài.</p>
+      <p style="color:#556;line-height:1.85;font-size:.97rem;">Đội ngũ giáo viên của chúng tôi đều có bằng cấp quốc tế, được đào tạo bài bản và đặc biệt yêu trẻ — đó là nền tảng tạo nên sự khác biệt của Sunshine.</p>
+    </div>
+    <!-- Bên phải: các con số -->
+    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+      <div style="background:white;border-radius:20px;padding:28px 24px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.07);">
+        <div style="font-family:'Baloo 2',cursive;font-size:2.4rem;font-weight:800;color:var(--sky);line-height:1;">2,500+</div>
+        <div style="font-size:.85rem;color:#889;font-weight:700;margin-top:6px;">Học viên đã tin tưởng</div>
+      </div>
+      <div style="background:white;border-radius:20px;padding:28px 24px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.07);">
+        <div style="font-family:'Baloo 2',cursive;font-size:2.4rem;font-weight:800;color:var(--sun);line-height:1;">12+</div>
+        <div style="font-size:.85rem;color:#889;font-weight:700;margin-top:6px;">Năm kinh nghiệm</div>
+      </div>
+      <div style="background:white;border-radius:20px;padding:28px 24px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.07);">
+        <div style="font-family:'Baloo 2',cursive;font-size:2.4rem;font-weight:800;color:var(--grass);line-height:1;">98%</div>
+        <div style="font-size:.85rem;color:#889;font-weight:700;margin-top:6px;">Phụ huynh hài lòng</div>
+      </div>
+      <div style="background:white;border-radius:20px;padding:28px 24px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.07);">
+        <div style="font-family:'Baloo 2',cursive;font-size:2.4rem;font-weight:800;color:var(--coral);line-height:1;">50+</div>
+        <div style="font-size:.85rem;color:#889;font-weight:700;margin-top:6px;">Học bổng du học</div>
+      </div>
+    </div>
+  </div>
+  <!-- Giá trị cốt lõi -->
+  <div style="max-width:1100px;margin:60px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+    <div class="reveal" style="background:white;border-radius:20px;padding:28px;box-shadow:0 4px 20px rgba(0,0,0,.06);border-top:4px solid var(--sky);">
+      <div style="font-size:2.2rem;margin-bottom:12px;">🎯</div>
+      <h4 style="font-family:'Baloo 2',cursive;font-size:1.1rem;font-weight:800;margin-bottom:10px;">Cam kết đầu ra</h4>
+      <p style="font-size:.88rem;color:#778;line-height:1.7;">Chúng tôi cam kết kết quả học tập rõ ràng. Nếu không đạt mục tiêu, học viên được học lại miễn phí.</p>
+    </div>
+    <div class="reveal" style="background:white;border-radius:20px;padding:28px;box-shadow:0 4px 20px rgba(0,0,0,.06);border-top:4px solid var(--sun);">
+      <div style="font-size:2.2rem;margin-bottom:12px;">👨‍🏫</div>
+      <h4 style="font-family:'Baloo 2',cursive;font-size:1.1rem;font-weight:800;margin-bottom:10px;">Giáo viên chất lượng</h4>
+      <p style="font-size:.88rem;color:#778;line-height:1.7;">100% giáo viên có chứng chỉ quốc tế TESOL/CELTA, được đào tạo chuyên biệt theo từng độ tuổi học viên.</p>
+    </div>
+    <div class="reveal" style="background:white;border-radius:20px;padding:28px;box-shadow:0 4px 20px rgba(0,0,0,.06);border-top:4px solid var(--grass);">
+      <div style="font-size:2.2rem;margin-bottom:12px;">🌱</div>
+      <h4 style="font-family:'Baloo 2',cursive;font-size:1.1rem;font-weight:800;margin-bottom:10px;">Học mà chơi</h4>
+      <p style="font-size:.88rem;color:#778;line-height:1.7;">Phương pháp học tích cực, vui vẻ giúp trẻ yêu thích tiếng Anh và tiến bộ tự nhiên, bền vững.</p>
+    </div>
+  </div>
+</section>
+
 <section id="contact">
   <div class="section-header reveal">
     <div class="section-tag">Liên Hệ</div>
@@ -323,16 +381,23 @@ footer{background:var(--dark);color:#fff;padding:56px 5% 28px;}
 <footer>
   <div class="f-grid">
     <div class="f-brand">
-      <a href="#home" class="logo"><img id="logo-footer" src="" alt="Sunshine English" style="height:44px;width:44px;"><div class="logo-text">Sunshine <span>English</span></div></a>
-      <p>Nơi mỗi đứa trẻ đều tỏa sáng với tiếng Anh.</p>
+      <a href="#home" class="logo"><img id="logo-footer" src="" alt="Sunshine English" style="height:88px;width:88px;object-fit:contain;"><div class="logo-text">Trung tâm Ngoại ngữ <span>Sunshine</span></div></a>
       <div class="socials">
-        <a class="soc" id="f-fb" href="#" title="Facebook">📘</a>
-        <a class="soc" id="f-yt" href="#" title="YouTube">📹</a>
-        <a class="soc zalo-soc" id="f-zalo" href="#" target="_blank" title="Zalo OA">
-          <svg width="18" height="18" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#0068FF"/><text x="32" y="44" text-anchor="middle" font-family="Arial Black" font-weight="900" font-size="30" fill="white">Z</text></svg>
+        <a class="soc" id="f-fb" href="#" title="Facebook" style="background:#1877F2;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
         </a>
-        <a class="soc" href="#" title="Instagram">📸</a>
-        <a class="soc" href="#" title="TikTok">🎵</a>
+        <a class="soc" id="f-yt" href="#" title="YouTube" style="background:#FF0000;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+        </a>
+        <a class="soc zalo-soc" id="f-zalo" href="#" target="_blank" title="Zalo OA" style="background:#0068FF;">
+          <svg width="20" height="20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="14" fill="#0068FF"/><text x="32" y="44" text-anchor="middle" font-family="Arial Black" font-weight="900" font-size="30" fill="white">Z</text></svg>
+        </a>
+        <a class="soc" href="#" title="Instagram" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <a class="soc" href="#" title="TikTok" style="background:#000;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>
+        </a>
       </div>
     </div>
     <div class="f-col"><h5>Khóa học</h5><ul>
@@ -341,15 +406,15 @@ footer{background:var(--dark);color:#fff;padding:56px 5% 28px;}
       <li><a href="#courses">THPT – Luyện thi</a></li><li><a href="#courses">Luyện thi IELTS</a></li>
     </ul></div>
     <div class="f-col"><h5>Thông tin</h5><ul>
-      <li><a href="#">Về chúng tôi</a></li><li><a href="#">Đội ngũ giáo viên</a></li>
+      <li><a href="#about">Về chúng tôi</a></li>
       <li><a href="#schedule">Lịch khai giảng</a></li><li><a href="#contact">Liên hệ</a></li>
     </ul></div>
     <div class="f-col"><h5>Nhận thông báo</h5>
-      <div class="f-nl"><input type="email" placeholder="Email của bạn"><button onclick="subscribeNewsletter()">📩 Đăng ký</button></div>
+      <div class="f-nl"><input type="email" placeholder="Email của bạn"><button onclick="subscribeNewsletter()">Đăng ký</button></div>
       <p style="color:#99aab5;font-size:.78rem;margin-top:12px;line-height:1.7;" id="f-contact-block"></p>
     </div>
   </div>
-  <div class="f-bottom"><span>© 2026 Sunshine English Center. All rights reserved.</span><span>Thiết kế với ❤️ cho tương lai của con em Việt Nam</span></div>
+  <div class="f-bottom"><span>© 2026 Sunshine English Center. All rights reserved.</span></div>
 </footer>
 
 <div class="zalo-fab">
