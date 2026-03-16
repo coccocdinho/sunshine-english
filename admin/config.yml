@@ -1,0 +1,223 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/sunshine-english   # ← thay bằng username/repo của bạn
+  branch: main
+
+# Cho phép đăng nhập qua GitHub OAuth (Netlify tự xử lý)
+publish_mode: editorial_workflow
+
+# Cloudinary — lưu ảnh
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: YOUR_CLOUDINARY_CLOUD_NAME      # ← lấy trong Cloudinary dashboard
+    api_key: YOUR_CLOUDINARY_API_KEY            # ← lấy trong Cloudinary dashboard
+
+media_folder: "uploads"
+public_folder: "uploads"
+
+collections:
+
+  # ─────────────────────────────────────────
+  # CÀI ĐẶT CHUNG (SĐT, địa chỉ, Zalo...)
+  # ─────────────────────────────────────────
+  - name: "settings"
+    label: "⚙️ Cài đặt chung"
+    files:
+      - name: "general"
+        label: "Thông tin trung tâm"
+        file: "data.json"
+        fields:
+          - label: "Thông tin liên hệ"
+            name: "settings"
+            widget: "object"
+            fields:
+              - { label: "Số điện thoại / Zalo", name: "phone", widget: "string" }
+              - { label: "Địa chỉ", name: "address", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Giờ làm việc", name: "hours", widget: "string" }
+              - { label: "Link Zalo OA", name: "zalo_link", widget: "string" }
+              - { label: "Link Facebook", name: "facebook", widget: "string", required: false }
+              - { label: "Link YouTube", name: "youtube", widget: "string", required: false }
+
+  # ─────────────────────────────────────────
+  # BANNER / SLIDER
+  # ─────────────────────────────────────────
+  - name: "banners"
+    label: "🖼️ Banner trang chủ"
+    label_singular: "Banner"
+    folder: "_banners"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "id"
+    summary: "{{badge_text}} — {{title_highlight}}"
+    fields:
+      - { label: "ID (không dấu, không khoảng trắng)", name: "id", widget: "string" }
+      - { label: "Hiển thị?", name: "active", widget: "boolean", default: true }
+      - label: "Hình ảnh banner"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Ảnh nền cho slide này (tùy chọn). Upload lên Cloudinary."
+      - { label: "Icon badge (emoji)", name: "badge_icon", widget: "string", default: "🏆" }
+      - { label: "Nội dung badge", name: "badge_text", widget: "string" }
+      - { label: "Dòng tiêu đề 1", name: "title_line1", widget: "string" }
+      - { label: "Từ highlight (màu xanh)", name: "title_highlight", widget: "string" }
+      - { label: "Dòng tiêu đề 2", name: "title_line2", widget: "string" }
+      - { label: "Mô tả", name: "description", widget: "text" }
+      - { label: "Nút 1 — text", name: "btn1_text", widget: "string" }
+      - { label: "Nút 1 — link", name: "btn1_link", widget: "string", default: "#courses" }
+      - { label: "Nút 2 — text", name: "btn2_text", widget: "string" }
+      - { label: "Nút 2 — link", name: "btn2_link", widget: "string", default: "#contact" }
+      - label: "Thống kê (4 con số)"
+        name: "stats"
+        widget: "list"
+        max: 4
+        fields:
+          - { label: "Con số", name: "num", widget: "string" }
+          - { label: "Nhãn", name: "label", widget: "string" }
+      - { label: "Emoji card", name: "card_emoji", widget: "string" }
+      - { label: "Tiêu đề card", name: "card_title", widget: "string" }
+      - { label: "Mô tả card", name: "card_sub", widget: "string" }
+      - label: "Màu nền slide"
+        name: "theme"
+        widget: "select"
+        options:
+          - { label: "Xanh dương", value: "blue" }
+          - { label: "Hồng", value: "pink" }
+          - { label: "Xanh lá", value: "green" }
+          - { label: "Cam vàng", value: "orange" }
+
+  # ─────────────────────────────────────────
+  # KHÓA HỌC
+  # ─────────────────────────────────────────
+  - name: "courses"
+    label: "📚 Khóa học"
+    label_singular: "Khóa học"
+    folder: "_courses"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "title"
+    summary: "{{title}} — {{age}} — {{price}}"
+    fields:
+      - { label: "Tên khóa học", name: "title", widget: "string" }
+      - { label: "Độ tuổi", name: "age", widget: "string", hint: "VD: 4–6 tuổi, Lớp 1–3" }
+      - { label: "Emoji đại diện", name: "emoji", widget: "string", default: "📚" }
+      - label: "Ảnh khóa học"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Ảnh minh họa lớp học. Upload lên Cloudinary."
+      - label: "Màu card"
+        name: "color"
+        widget: "select"
+        options:
+          - { label: "Xanh dương", value: "blue" }
+          - { label: "Xanh lá", value: "green" }
+          - { label: "Vàng", value: "yellow" }
+          - { label: "Tím", value: "purple" }
+          - { label: "San hô", value: "coral" }
+          - { label: "Xanh ngọc", value: "teal" }
+      - { label: "Mô tả ngắn", name: "description", widget: "text" }
+      - label: "Điểm nổi bật (tối đa 3)"
+        name: "features"
+        widget: "list"
+        max: 3
+        field: { label: "Điểm nổi bật", name: "item", widget: "string" }
+      - { label: "Học phí", name: "price", widget: "string", hint: "VD: 1.200.000đ" }
+      - { label: "Nổi bật nhất?", name: "featured", widget: "boolean", default: false }
+      - { label: "Thứ tự hiển thị", name: "order", widget: "number", default: 1 }
+
+  # ─────────────────────────────────────────
+  # LỊCH KHAI GIẢNG
+  # ─────────────────────────────────────────
+  - name: "schedule"
+    label: "📅 Lịch khai giảng"
+    label_singular: "Lớp học"
+    folder: "_schedule"
+    create: true
+    slug: "{{course}}-{{date}}"
+    identifier_field: "course"
+    summary: "{{date}} — {{course}} — {{status}}"
+    sortable_fields: ["date", "category", "status"]
+    fields:
+      - { label: "Tên khóa / lớp", name: "course", widget: "string" }
+      - { label: "Ngày khai giảng", name: "date", widget: "string", hint: "VD: 15/06/2026" }
+      - { label: "Lịch học", name: "schedule", widget: "string", hint: "VD: T2–T4–T6, 18:00–20:00" }
+      - { label: "Giáo viên", name: "teacher", widget: "string" }
+      - { label: "Sĩ số", name: "seats", widget: "string", hint: "VD: 8/15" }
+      - label: "Trạng thái"
+        name: "status"
+        widget: "select"
+        options:
+          - { label: "🟢 Còn chỗ", value: "open" }
+          - { label: "🟡 Sắp khai giảng", value: "soon" }
+          - { label: "🔴 Hết chỗ", value: "full" }
+      - label: "Danh mục"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Mầm non", value: "mamnon" }
+          - { label: "Tiểu học", value: "tieuhoc" }
+          - { label: "THCS", value: "thcs" }
+          - { label: "THPT", value: "thpt" }
+          - { label: "IELTS", value: "ielts" }
+
+  # ─────────────────────────────────────────
+  # CẢM NHẬN PHỤ HUYNH
+  # ─────────────────────────────────────────
+  - name: "testimonials"
+    label: "💬 Cảm nhận phụ huynh"
+    label_singular: "Cảm nhận"
+    folder: "_testimonials"
+    create: true
+    slug: "{{name}}"
+    identifier_field: "name"
+    summary: "{{name}} — {{tag}}"
+    fields:
+      - label: "Danh mục"
+        name: "tag"
+        widget: "select"
+        options:
+          - { label: "Mầm non", value: "Mầm non" }
+          - { label: "Tiểu học", value: "Tiểu học" }
+          - { label: "THCS", value: "THCS" }
+          - { label: "THPT", value: "THPT" }
+          - { label: "IELTS", value: "IELTS" }
+      - { label: "Nội dung cảm nhận", name: "content", widget: "text" }
+      - { label: "Họ tên phụ huynh / học viên", name: "name", widget: "string" }
+      - { label: "Vai trò / mô tả", name: "role", widget: "string", hint: "VD: Phụ huynh bé Bông · Quận Đống Đa" }
+      - label: "Ảnh đại diện"
+        name: "avatar"
+        widget: "image"
+        required: false
+        hint: "Ảnh phụ huynh / học viên (tùy chọn)"
+
+  # ─────────────────────────────────────────
+  # ẢNH LỚP HỌC (Gallery)
+  # ─────────────────────────────────────────
+  - name: "gallery"
+    label: "📷 Ảnh lớp học"
+    label_singular: "Ảnh"
+    folder: "_gallery"
+    create: true
+    slug: "{{title}}"
+    identifier_field: "title"
+    summary: "{{title}}"
+    fields:
+      - { label: "Tiêu đề ảnh", name: "title", widget: "string" }
+      - label: "Ảnh"
+        name: "image"
+        widget: "image"
+        hint: "Upload ảnh lớp học, hoạt động, cơ sở vật chất..."
+      - { label: "Mô tả", name: "caption", widget: "string", required: false }
+      - label: "Danh mục"
+        name: "category"
+        widget: "select"
+        required: false
+        options:
+          - { label: "Lớp học", value: "classroom" }
+          - { label: "Hoạt động", value: "activity" }
+          - { label: "Cơ sở vật chất", value: "facility" }
+          - { label: "Sự kiện", value: "event" }
+      - { label: "Hiển thị?", name: "active", widget: "boolean", default: true }
